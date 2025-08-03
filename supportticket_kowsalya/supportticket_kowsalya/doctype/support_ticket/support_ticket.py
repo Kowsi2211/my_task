@@ -18,7 +18,7 @@ class SupportTicket(Document):
 							<p> Ticket ID : {doc.name}</p>
 							<p> Description : {doc.issue_description}</p>
 							<p> Thank You </p>"""
-				frappe.send_mail(
+				frappe.sendmail(
 					recipients = [recipient],
 					subject = subject,
 					message = message,
