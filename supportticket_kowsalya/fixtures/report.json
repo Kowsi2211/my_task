@@ -1,0 +1,164 @@
+[
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [
+   {
+    "fieldname": "ticket_id",
+    "fieldtype": "Data",
+    "label": "Ticket ID",
+    "options": null,
+    "parent": "Open Tickets Summary",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   },
+   {
+    "fieldname": "issue_title",
+    "fieldtype": "Data",
+    "label": "Issue Title",
+    "options": null,
+    "parent": "Open Tickets Summary",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   },
+   {
+    "fieldname": "cust_name",
+    "fieldtype": "Data",
+    "label": "Customer Name",
+    "options": null,
+    "parent": "Open Tickets Summary",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   },
+   {
+    "fieldname": "ticket_type",
+    "fieldtype": "Data",
+    "label": "Ticket Type",
+    "options": null,
+    "parent": "Open Tickets Summary",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   },
+   {
+    "fieldname": "priority",
+    "fieldtype": "Data",
+    "label": "Priority",
+    "options": null,
+    "parent": "Open Tickets Summary",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   },
+   {
+    "fieldname": "status",
+    "fieldtype": "Data",
+    "label": "Status",
+    "options": null,
+    "parent": "Open Tickets Summary",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   },
+   {
+    "fieldname": "total_estimated_time",
+    "fieldtype": "Data",
+    "label": "Total Estimated Time",
+    "options": null,
+    "parent": "Open Tickets Summary",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   },
+   {
+    "fieldname": "total_cost_estimate",
+    "fieldtype": "Data",
+    "label": "Total Cost Estimate",
+    "options": null,
+    "parent": "Open Tickets Summary",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   }
+  ],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [
+   {
+    "default": null,
+    "fieldname": "ticket_type",
+    "fieldtype": "Select",
+    "label": "Ticket Type",
+    "mandatory": 1,
+    "options": "Bug\nFeature Request\nQuery",
+    "parent": "Open Tickets Summary",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "priority_level",
+    "fieldtype": "Select",
+    "label": "Priority Level",
+    "mandatory": 1,
+    "options": "Low\nMedium\nHigh\nCritical",
+    "parent": "Open Tickets Summary",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": "Today",
+    "fieldname": "reported_on",
+    "fieldtype": "Date",
+    "label": "Date Range",
+    "mandatory": 1,
+    "options": null,
+    "parent": "Open Tickets Summary",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "ticket_status",
+    "fieldtype": "Select",
+    "label": "Ticket Status",
+    "mandatory": 1,
+    "options": "Draft\nOpen\nAssigned\nResolved\nReopened\nClosed",
+    "parent": "Open Tickets Summary",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   }
+  ],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2025-08-03 17:23:41.276075",
+  "module": "Supportticket Kowsalya",
+  "name": "Open Tickets Summary",
+  "prepared_report": 0,
+  "query": "select \r\n    name as ticket_id,\r\n    issue_title as issue_title,\r\n    customer_name as cust_name,\r\n    ticket_type as ticket_type,\r\n    priority_level as priority,\r\n    workflow_state as status,\r\n    total_estimated_time as total_estimated_time,\r\n    total_cost_estimate as total_cost_estimate\r\nfrom `tabSupport Ticket`\r\nwhere \r\n    ticket_type = %(ticket_type)s and\r\n    priority_level = %(priority_level)s and\r\n    reported_on = %(reported_on)s and\r\n    workflow_state = %(ticket_status)s\r\n",
+  "ref_doctype": "Support Ticket",
+  "reference_report": null,
+  "report_name": "Open Tickets Summary",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "Open Tickets Summary",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   }
+  ],
+  "timeout": 0
+ }
+]

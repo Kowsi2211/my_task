@@ -1,0 +1,173 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{TKT}-{ticket_type}-{MM}{YYYY}-{###}",
+ "creation": "2025-08-02 18:52:40.694976",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_name",
+  "customer_email",
+  "ticket_type",
+  "priority_level",
+  "reported_by",
+  "reported_on",
+  "send_notification",
+  "column_break_deod",
+  "issue_title",
+  "issue_description",
+  "section_break_jqag",
+  "support_details",
+  "total_estimated_time",
+  "total_cost_estimate",
+  "section_break_zy9y",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_zy9y",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Support Ticket",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer Name",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "issue_title",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Issue Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "issue_description",
+   "fieldtype": "Text Editor",
+   "label": "Issue Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ticket_type",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Ticket Type",
+   "options": "Bug\nFeature Request\nQuery"
+  },
+  {
+   "fieldname": "priority_level",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Priority Level",
+   "options": "Low\nMedium\nHigh\nCritical"
+  },
+  {
+   "default": "__user",
+   "fieldname": "reported_by",
+   "fieldtype": "Data",
+   "label": "Reported By",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "reported_on",
+   "fieldtype": "Date",
+   "label": "Reported On",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "send_notification",
+   "fieldtype": "Check",
+   "label": "Send Notification"
+  },
+  {
+   "fieldname": "section_break_jqag",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 11,
+   "fieldname": "support_details",
+   "fieldtype": "Table",
+   "label": "Support Details",
+   "options": "Support Task Table",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_estimated_time",
+   "fieldtype": "Float",
+   "label": "Total Estimated Time",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_cost_estimate",
+   "fieldtype": "Float",
+   "label": "Total Cost Estimate",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer_email",
+   "fieldtype": "Data",
+   "label": "Customer Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_deod",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-08-03 14:21:00.521172",
+ "modified_by": "Administrator",
+ "module": "Supportticket Kowsalya",
+ "name": "Support Ticket",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

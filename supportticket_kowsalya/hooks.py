@@ -242,3 +242,53 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+fixtures = [
+    {"dt":"Workflow","filters": [
+        [ 
+            "name","in", [
+            "Support Ticket WorkFlow"
+        ]
+        ]
+       
+    ]},
+    {"dt":"Workflow State","filters": [
+        [ 
+            "name","in", [
+            "Reopened","Closed","Resolved","Assigned","Open","Draft"
+        ]
+        ]
+       
+    ]},
+    {"dt":"Web Form","filters": [
+        [ 
+            "name","in", [
+            "support-ticket"
+        ]
+        ]
+       
+    ]},
+    {"dt":"Report","filters": [
+        [ 
+            "name","in", [
+            "Open Tickets Summary"
+        ]
+        ]
+       
+    ]},
+    {"dt":"Custom Field","filters": [
+        [ 
+            "name","in", [
+            "Support Ticket-workflow_state"
+        ]
+        ]
+       
+    ]},
+    {"dt":"Role","filters": [
+        [ 
+            "name","in", [
+            "Support Manager","Support Agent"
+        ]
+        ]
+       
+    ]},
+]

@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-02 18:59:04.808968",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "task_description",
+  "assigned_staff",
+  "time_estimate",
+  "status",
+  "hourly_rate",
+  "cost_estimate"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "task_description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Task Description",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "assigned_staff",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Assigned Staff",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "time_estimate",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Time Estimate",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Open\nIn Progress\nCompleted"
+  },
+  {
+   "columns": 1,
+   "fieldname": "hourly_rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Hourly Rate",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "cost_estimate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Cost Estimate",
+   "precision": "2",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-03 14:04:26.132607",
+ "modified_by": "Administrator",
+ "module": "Supportticket Kowsalya",
+ "name": "Support Task Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
